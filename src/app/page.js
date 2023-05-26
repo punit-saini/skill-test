@@ -1,113 +1,137 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+
+    {/* Screen 1 */}
+      <div className='image-container w-full p-6 mb-2'>
+
+          {/* Navbar */}
+          <div className='flex h-screen justify-around  align-middle'>
+
+            <img  src="logo.png" className='w-12 h-12' alt="logo" />
+            <div className=" text-white flex gap-6 italic font-bold">
+              <Link href={'#history'}  className='underline underline-offset-8'>HISTORY</Link>
+              <Link href={'#team'} className='  underline underline-offset-8 '>TEAM</Link>
+            </div>
+
+          </div>
+
+          <div className='divider flex  md:w-[66%] mx-auto justify-between align-middle'>
+              <div className='logo-n-text flex gap-3 align-middle'>
+                  <img className='w-12' src='logo.png' />
+                  <img className=' w-36 h-14' src='divider-text.png' />
+              </div>
+              <div className=" text-black flex gap-6 italic font-bold self-center">
+              <Link href={'#history'}  className='underline underline-offset-8'>HISTORY</Link>
+              <Link href={'#team'} className='  underline underline-offset-8 '>TEAM</Link>
+            </div>
+          </div>
+
+      </div>
+
+    {/* Screen 2 */}
+
+
+      <div className='history mt-24 relative'>
+        <div className='flex md:w-[66%] mx-auto p-24 pb-0'>
+          <div className='text-[#6d7d98] history-heading-big font-bold  text-9xl'>
+            <p>01</p>
+          </div>
+          <div className='history-heading-small mb-4 self-end '>
+            <p className=' font-extrabold text-3xl text-[#414f6b]'>HISTORY</p>
+            <p className=' border-3 p-3 rounded-sm w-fit bg-[#6d7d98]'  ></p>
+          </div>
+         </div>
+        <p className='text-black md:w-[60%] md:pl-36 pl-12 w-4/5  mx-auto text-left '>I will give you a , extremely painful can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy </p>
+
+        <div className='carousel h-[25%] bg-[#3e4a62] w-full absolute bottom-0 opacity-80'>
+            <div className='carousel-images flex justify-center gap-4 align-middle mt-12 lg:mt-8 overflow-y-scroll'>
+                  <img src='/carousel-1.png' />
+                  <img src='/carousel-2.png' />
+                  <img src='/carousel-1.png' />
+                  <img src='/carousel-2.png' />
+            </div>
+            <div className='ellipse flex justify-center mt-2 gap-3 '>
+                <img src='/Ellipse 1 copy 2.png' />
+                <img src='/Ellipse 1.png' />
+                <img src='/Ellipse 1.png' />
+            </div>
+         </div>
+      </div>
+
+    
+    {/* Screen 3 */}
+
+    <div className='h-screen'>
+      <div className='flex flex-col lg:flex-row lg:w-[66%] mx-auto p-6 gap-8'>
+         <div className='flex pb-0 justify-center md:justify-start'>
+          <div className='text-[#6d7d98] history-heading-big font-bold  text-9xl'>
+            <p>02</p>
+          </div>
+          <div className='history-heading-small mb-4 self-end '>
+            <p className=' font-extrabold text-3xl text-[#414f6b]'>CLIMB</p>
+            <p className=' border-3 p-3 rounded-sm w-fit bg-[#6d7d98]'  ></p>
+          </div>
+       </div>
+
+         <p className='text-lg self-center'>
+          But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure
+         </p>
+      </div>
+
+      <div className='bar h-12 mx-auto bg-[#414f6b] text-white '>
+        <div className='w-[66%] mx-auto flex font-semibold text-lg gap-2 '>
+          <h1 className='ml-8 bg-gray-200 text-[#414f6b] h-12 font-bold my-auto text-2xl px-4 underline pt-1 underline-offset-8'>MOUNTAIN 1</h1>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className='mountain'>
+
+      <div className='md:w-[66%] pt-12'>
+        <div className='w-fit mx-auto bg-white p-12'>
+          
+            <h1 className=' font-bold text-[#414f6b] text-3xl mb-2'>SCHEDULE</h1>
+            <div className='flex gap-8 mb-2'>
+              <p>25 Nov 2016</p>
+              <p>Vestibulum Vivera</p>
+            </div>
+            <div className='flex gap-8 mb-2'>
+              <p>23 Mar 2012</p>
+              <p>Vestibulum Vivera</p>
+            </div>
+            <div className='flex gap-8 mb-2'>
+              <p>12 Feb 2015</p>
+              <p>Vestibulum Vivera</p>
+            </div>
+            <div className='flex gap-8 mb-2'>
+              <p>25 Nov 2017</p>
+              <p>Vestibulum Vivera</p>
+            </div>
+            <div className='flex gap-8 mb-2'>
+              <p>25 Nov 2018</p>
+              <p>Vestibulum Vivera</p>
+            </div>
+          </div>
+        </div>
+        
+       
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <footer className='w-full lg:h-24 bg-[#414f6b]'>
+          <div className=' px-6  lg:w-[66%] mx-auto gap-3 flex pt-6 flex-col lg:flex-row justify-between'>
+                <div className='logo-n-text flex gap-3 align-middle self-center'>
+                    <img className='w-12 h-12'  src='logo.png' />
+                    <p className='new-font text-[#6d7d98] font-bold text-2xl leading-none text-center'> LOSANGELES <br /> <span className=' tracking-widest'>MOUNTAINS</span> </p>
+                </div>
+                <div className=" text-[#6d7d98] flex gap-6 italic font-bold self-center">
+                  <p>COPYRIGHT 2016. ALL RIGHTS RESERVED.</p>
+                </div>
+          </div>
+      </footer>
+    </div>
+      
     </main>
   )
 }
